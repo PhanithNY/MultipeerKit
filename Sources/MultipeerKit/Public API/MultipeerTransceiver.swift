@@ -148,6 +148,7 @@ public final class MultipeerTransceiver {
         guard !availablePeers.contains(peer) else { return }
 
         availablePeers.append(peer)
+        handlePeerConnected(peer)
     }
 
     private func handlePeerRemoved(_ peer: Peer) {
